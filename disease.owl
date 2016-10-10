@@ -22,10 +22,16 @@
         <NamedIndividual IRI="#Bob"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Zumbi"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Coriza"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#infecta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hipotermia"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Tuberculose"/>
@@ -40,6 +46,12 @@
         <NamedIndividual IRI="#Sangramento"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Hipotérmica"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cérebro"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Cansaço"/>
     </Declaration>
     <Declaration>
@@ -47,9 +59,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Zika"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#está_com"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#tem"/>
@@ -82,13 +91,16 @@
         <NamedIndividual IRI="#Dor_muscular"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#infectada_com"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#T-Virus"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Dengue_hemorrágica"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Meningite"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Doença_X"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Tosse"/>
@@ -101,6 +113,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Coceira"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#come"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Gastrite"/>
@@ -146,6 +161,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#apresenta"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#cérebro_de"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Doença"/>
@@ -358,7 +376,7 @@
     <EquivalentClasses>
         <Class IRI="#Doente"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#está_com"/>
+            <ObjectProperty IRI="#infectada_com"/>
             <Class IRI="#Doença"/>
         </ObjectSomeValuesFrom>
     </EquivalentClasses>
@@ -707,6 +725,25 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#Hipotérmica"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#tem"/>
+            <NamedIndividual IRI="#Hipotermia"/>
+        </ObjectHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Hipotérmica"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#Temperatura"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">35.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Histoplasmose"/>
         <ObjectIntersectionOf>
             <ObjectSomeValuesFrom>
@@ -921,6 +958,34 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#T-Virus"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#come"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty IRI="#cérebro_de"/>
+                            <Class IRI="#Pessoa"/>
+                        </ObjectSomeValuesFrom>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Hipotermia"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Tuberculose"/>
         <ObjectIntersectionOf>
             <ObjectSomeValuesFrom>
@@ -1030,6 +1095,13 @@
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Zumbi"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#infectada_com"/>
+            <Class IRI="#T-Virus"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#Candidíase"/>
         <Class IRI="#Doença"/>
@@ -1075,6 +1147,10 @@
         <Class IRI="#Doença"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Hipotérmica"/>
+        <Class IRI="#Pessoa"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Histoplasmose"/>
         <Class IRI="#Doença"/>
     </SubClassOf>
@@ -1091,12 +1167,20 @@
         <Class IRI="#Doença"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#T-Virus"/>
+        <Class IRI="#Doença"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Tuberculose"/>
         <Class IRI="#Doença"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Zika"/>
         <Class IRI="#Doença"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Zumbi"/>
+        <Class IRI="#Pessoa"/>
     </SubClassOf>
     <DisjointClasses>
         <Class IRI="#Doença"/>
@@ -1111,7 +1195,17 @@
         <Class IRI="#Sintoma"/>
     </DisjointClasses>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#está_com"/>
+        <ObjectProperty IRI="#come"/>
+        <NamedIndividual IRI="#Alice"/>
+        <NamedIndividual IRI="#cérebro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#infectada_com"/>
+        <NamedIndividual IRI="#Alice"/>
+        <NamedIndividual IRI="#Doença_da_Alice"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#infectada_com"/>
         <NamedIndividual IRI="#Bob"/>
         <NamedIndividual IRI="#Doença_do_Bob"/>
     </ObjectPropertyAssertion>
@@ -1120,10 +1214,15 @@
         <NamedIndividual IRI="#Bob"/>
         <NamedIndividual IRI="#Vermelhidão"/>
     </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#cérebro_de"/>
+        <NamedIndividual IRI="#cérebro"/>
+        <NamedIndividual IRI="#Bob"/>
+    </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#Temperatura"/>
         <NamedIndividual IRI="#Alice"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">39.0</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">30.0</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#tem"/>
@@ -1138,8 +1237,8 @@
         <ObjectProperty IRI="#é_apresentado_por"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#está_com"/>
         <ObjectProperty IRI="#infecta"/>
+        <ObjectProperty IRI="#infectada_com"/>
     </InverseObjectProperties>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#afeta"/>
@@ -1150,12 +1249,12 @@
         <Class IRI="#Doença"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#está_com"/>
-        <Class IRI="#Doente"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#infecta"/>
         <Class IRI="#Doença"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#infectada_com"/>
+        <Class IRI="#Doente"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#tem"/>
@@ -1174,12 +1273,12 @@
         <Class IRI="#Sintoma"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#está_com"/>
-        <Class IRI="#Doença"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#infecta"/>
         <Class IRI="#Doente"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#infectada_com"/>
+        <Class IRI="#Doença"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#tem"/>
