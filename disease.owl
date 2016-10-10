@@ -1,0 +1,1205 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/aszdrick/ontologies/2016/9/disease"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/aszdrick/ontologies/2016/9/disease">
+    <Prefix name="" IRI="http://www.semanticweb.org/aszdrick/ontologies/2016/9/disease#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Micose"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Doença_do_Bob"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Bob"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Coriza"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#infecta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tuberculose"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sintoma"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#afeta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sangramento"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cansaço"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Manchas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Zika"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#está_com"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tem"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Diarreia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Perda_de_apetite"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dor_estomacal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Histoplasmose"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Temperatura"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Esquistossomose"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pessoa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Doente"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dor_muscular"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dengue_hemorrágica"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Meningite"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Doença_X"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tosse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gripe_aviária"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Doença_da_Alice"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Coceira"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gastrite"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gripe_H1N1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Alice"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Falta_de_ar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vômitos"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Febril"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tontura"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dengue_clássica"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dor_no_peito"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Conjuntivite"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Candidíase"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sinusite"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Câncer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vermelhidão"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#apresenta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Doença"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#é_apresentado_por"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dor_de_cabeça"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Perda_de_peso"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Febre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Febre_amarela"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Candidíase"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Coceira"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Vermelhidão"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Câncer"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Dor_de_cabeça"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Febre"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Perda_de_peso"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Sangramento"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Tosse"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Dengue_clássica"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Dor_de_cabeça"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Febre"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Tontura"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Vômitos"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Dengue_hemorrágica"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Dor_de_cabeça"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Falta_de_ar"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Febre"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Sangramento"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Tontura"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Vômitos"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Doente"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#está_com"/>
+            <Class IRI="#Doença"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Doente"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#tem"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#Sintoma"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#é_apresentado_por"/>
+                    <Class IRI="#Doença"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Doença"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#apresenta"/>
+            <Class IRI="#Sintoma"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Esquistossomose"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Diarreia"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Dor_de_cabeça"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Febre"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Perda_de_peso"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Sangramento"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Tontura"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Vômitos"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Febre_amarela"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Dor_de_cabeça"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Febre"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Sangramento"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Vômitos"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Febril"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#tem"/>
+            <NamedIndividual IRI="#Febre"/>
+        </ObjectHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Febril"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#Temperatura"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">37.8</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Gastrite"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Dor_de_cabeça"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Dor_estomacal"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Perda_de_apetite"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Vômitos"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Gripe_H1N1"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Coriza"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Diarreia"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Dor_de_cabeça"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Dor_muscular"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Falta_de_ar"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Febre"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Perda_de_apetite"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Tosse"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Vômitos"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Gripe_aviária"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Coriza"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Dor_muscular"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Falta_de_ar"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Febre"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Histoplasmose"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Dor_de_cabeça"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Dor_no_peito"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Falta_de_ar"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Febre"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Sangramento"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Tosse"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Vermelhidão"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Meningite"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Dor_de_cabeça"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Febre"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Perda_de_apetite"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Vômitos"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Micose"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Coceira"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Manchas"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Vermelhidão"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Sintoma"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#afeta"/>
+            <Class IRI="#Pessoa"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Sintoma"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#é_apresentado_por"/>
+            <Class IRI="#Doença"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Sinusite"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Coriza"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Dor_de_cabeça"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Febre"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Tosse"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Tuberculose"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Dor_no_peito"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Febre"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Perda_de_apetite"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Perda_de_peso"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Tosse"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Zika"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Cansaço"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Conjuntivite"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Dor_de_cabeça"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Dor_muscular"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#infecta"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Pessoa"/>
+                    <ObjectHasValue>
+                        <ObjectProperty IRI="#tem"/>
+                        <NamedIndividual IRI="#Febre"/>
+                    </ObjectHasValue>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Candidíase"/>
+        <Class IRI="#Doença"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Câncer"/>
+        <Class IRI="#Doença"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dengue_clássica"/>
+        <Class IRI="#Doença"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dengue_hemorrágica"/>
+        <Class IRI="#Doença"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Doente"/>
+        <Class IRI="#Pessoa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Esquistossomose"/>
+        <Class IRI="#Doença"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Febre_amarela"/>
+        <Class IRI="#Doença"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Febril"/>
+        <Class IRI="#Pessoa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gastrite"/>
+        <Class IRI="#Doença"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gripe_H1N1"/>
+        <Class IRI="#Doença"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gripe_aviária"/>
+        <Class IRI="#Doença"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Histoplasmose"/>
+        <Class IRI="#Doença"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Meningite"/>
+        <Class IRI="#Doença"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Micose"/>
+        <Class IRI="#Doença"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sinusite"/>
+        <Class IRI="#Doença"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tuberculose"/>
+        <Class IRI="#Doença"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Zika"/>
+        <Class IRI="#Doença"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Doença"/>
+        <Class IRI="#Pessoa"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Doença"/>
+        <Class IRI="#Sintoma"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Pessoa"/>
+        <Class IRI="#Sintoma"/>
+    </DisjointClasses>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#está_com"/>
+        <NamedIndividual IRI="#Bob"/>
+        <NamedIndividual IRI="#Doença_do_Bob"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tem"/>
+        <NamedIndividual IRI="#Bob"/>
+        <NamedIndividual IRI="#Vermelhidão"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Temperatura"/>
+        <NamedIndividual IRI="#Alice"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">39.0</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#tem"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#afeta"/>
+        <ObjectProperty IRI="#tem"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#apresenta"/>
+        <ObjectProperty IRI="#é_apresentado_por"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#está_com"/>
+        <ObjectProperty IRI="#infecta"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#afeta"/>
+        <Class IRI="#Sintoma"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#apresenta"/>
+        <Class IRI="#Doença"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#está_com"/>
+        <Class IRI="#Doente"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#infecta"/>
+        <Class IRI="#Doença"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tem"/>
+        <Class IRI="#Pessoa"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#é_apresentado_por"/>
+        <Class IRI="#Sintoma"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#afeta"/>
+        <Class IRI="#Pessoa"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#apresenta"/>
+        <Class IRI="#Sintoma"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#está_com"/>
+        <Class IRI="#Doença"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#infecta"/>
+        <Class IRI="#Doente"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tem"/>
+        <Class IRI="#Sintoma"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#é_apresentado_por"/>
+        <Class IRI="#Doença"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Temperatura"/>
+        <Class IRI="#Pessoa"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Temperatura"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
