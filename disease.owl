@@ -184,6 +184,9 @@
         <ObjectProperty IRI="#apresenta"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#Garganta_inflamada"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Doença"/>
     </Declaration>
     <Declaration>
@@ -1114,6 +1117,19 @@
             <NamedIndividual IRI="#Febre_alta"/>
         </ObjectHasValue>
     </EquivalentClasses>
+    <EquivalentClasses>
+        <ObjectIntersectionOf>
+            <Class IRI="#Humano"/>
+            <DataHasValue>
+                <DataProperty IRI="#Garganta_inflamada"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#tem"/>
+            <NamedIndividual IRI="#Dor_de_garganta"/>
+        </ObjectHasValue>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#Candidíase"/>
         <Class IRI="#Doença"/>
@@ -1212,11 +1228,6 @@
         <NamedIndividual IRI="#EpidemiaX"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#tem"/>
-        <NamedIndividual IRI="#Albert"/>
-        <NamedIndividual IRI="#Dor_de_garganta"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#come"/>
         <NamedIndividual IRI="#Alice"/>
         <NamedIndividual IRI="#coisa_suculenta"/>
@@ -1261,6 +1272,11 @@
         <NamedIndividual IRI="#coisa_suculenta"/>
         <NamedIndividual IRI="#Bob"/>
     </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Garganta_inflamada"/>
+        <NamedIndividual IRI="#Albert"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#Temperatura"/>
         <NamedIndividual IRI="#Alice"/>
@@ -1335,9 +1351,17 @@
         <Class IRI="#Doença"/>
     </ObjectPropertyRange>
     <DataPropertyDomain>
+        <DataProperty IRI="#Garganta_inflamada"/>
+        <Class IRI="#Humano"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#Temperatura"/>
         <Class IRI="#Humano"/>
     </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Garganta_inflamada"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#Temperatura"/>
         <Datatype abbreviatedIRI="xsd:float"/>
