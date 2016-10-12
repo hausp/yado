@@ -37,16 +37,16 @@
         <Class IRI="#Humano"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Hipotermia"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Tuberculose"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Sintoma"/>
+        <NamedIndividual IRI="#Hipotermia"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#afeta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sintoma"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Sangramento"/>
@@ -70,13 +70,13 @@
         <NamedIndividual IRI="#Diarreia"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Dor_estomacal"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Perda_de_apetite"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Histoplasmose"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Dor_estomacal"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Dengue"/>
@@ -95,6 +95,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Dor_muscular"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Charlie"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Dengue_hemorrágica"/>
@@ -121,16 +124,16 @@
         <NamedIndividual IRI="#Albert"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#come"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Gastrite"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Gripe_H1N1"/>
+        <ObjectProperty IRI="#come"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#possui"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gripe_H1N1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Alice"/>
@@ -170,6 +173,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Câncer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Doença_de_Charlie"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Vírus_Zumbi"/>
@@ -1249,6 +1255,31 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#infectado_com"/>
+        <NamedIndividual IRI="#Charlie"/>
+        <NamedIndividual IRI="#Doença_de_Charlie"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tem"/>
+        <NamedIndividual IRI="#Charlie"/>
+        <NamedIndividual IRI="#Dor_de_cabeça"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tem"/>
+        <NamedIndividual IRI="#Charlie"/>
+        <NamedIndividual IRI="#Perda_de_peso"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tem"/>
+        <NamedIndividual IRI="#Charlie"/>
+        <NamedIndividual IRI="#Sangramento"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tem"/>
+        <NamedIndividual IRI="#Charlie"/>
+        <NamedIndividual IRI="#Tosse"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#infectado_com"/>
         <NamedIndividual IRI="#Jones"/>
         <NamedIndividual IRI="#EpidemiaX"/>
     </ObjectPropertyAssertion>
@@ -1281,6 +1312,11 @@
         <DataProperty IRI="#Temperatura"/>
         <NamedIndividual IRI="#Alice"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">14.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Temperatura"/>
+        <NamedIndividual IRI="#Charlie"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">38.5</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#cérebro_de"/>
