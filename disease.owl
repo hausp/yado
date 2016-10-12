@@ -16,10 +16,16 @@
         <Class IRI="#Micose"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#coisa_suculenta"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Bob"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Zumbi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Órgão"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Coriza"/>
@@ -106,9 +112,6 @@
         <Class IRI="#Gripe_aviária"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Doença_da_Alice"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Coceira"/>
     </Declaration>
     <Declaration>
@@ -124,10 +127,19 @@
         <Class IRI="#Gripe_H1N1"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#possui"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Alice"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Falta_de_ar"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#parte_de"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Doença_desconhecida"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Vômitos"/>
@@ -158,6 +170,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Câncer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vírus_Zumbi"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Vermelhidão"/>
@@ -1001,6 +1016,13 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#Vírus_Zumbi"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#infecta"/>
+            <Class IRI="#Zumbi"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#Zika"/>
         <ObjectIntersectionOf>
             <ObjectSomeValuesFrom>
@@ -1067,6 +1089,13 @@
                 </ObjectSomeValuesFrom>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Órgão"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#parte_de"/>
+            <Class IRI="#Humano"/>
+        </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
         <ObjectIntersectionOf>
@@ -1194,6 +1223,10 @@
         <Class IRI="#Doença"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Vírus_Zumbi"/>
+        <Class IRI="#Doença"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Zika"/>
         <Class IRI="#Doença"/>
     </SubClassOf>
@@ -1224,9 +1257,14 @@
         <NamedIndividual IRI="#Dor_de_garganta"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#come"/>
+        <NamedIndividual IRI="#Alice"/>
+        <NamedIndividual IRI="#coisa_suculenta"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#infectado_com"/>
         <NamedIndividual IRI="#Alice"/>
-        <NamedIndividual IRI="#Doença_da_Alice"/>
+        <NamedIndividual IRI="#Doença_desconhecida"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#infectado_com"/>
@@ -1258,14 +1296,19 @@
         <NamedIndividual IRI="#Maria"/>
         <NamedIndividual IRI="#Coriza"/>
     </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#cérebro_de"/>
+        <NamedIndividual IRI="#coisa_suculenta"/>
+        <NamedIndividual IRI="#Bob"/>
+    </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#Temperatura"/>
         <NamedIndividual IRI="#Alice"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">14.0</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#tem"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty IRI="#cérebro_de"/>
+        <ObjectProperty IRI="#parte_de"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
         <ObjectProperty IRI="#afeta"/>
@@ -1278,6 +1321,10 @@
     <InverseObjectProperties>
         <ObjectProperty IRI="#infecta"/>
         <ObjectProperty IRI="#infectado_com"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#parte_de"/>
+        <ObjectProperty IRI="#possui"/>
     </InverseObjectProperties>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#afeta"/>
