@@ -79,6 +79,9 @@
         <NamedIndividual IRI="#Dor_estomacal"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Dengue"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Dor_de_garganta"/>
     </Declaration>
     <Declaration>
@@ -149,9 +152,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Tontura"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Dengue_clássica"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Conjuntivite"/>
@@ -288,7 +288,7 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Dengue_clássica"/>
+        <Class IRI="#Dengue"/>
         <ObjectIntersectionOf>
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#infecta"/>
@@ -341,16 +341,6 @@
                     <Class IRI="#Humano"/>
                     <ObjectHasValue>
                         <ObjectProperty IRI="#tem"/>
-                        <NamedIndividual IRI="#Dor_de_cabeça"/>
-                    </ObjectHasValue>
-                </ObjectIntersectionOf>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#infecta"/>
-                <ObjectIntersectionOf>
-                    <Class IRI="#Humano"/>
-                    <ObjectHasValue>
-                        <ObjectProperty IRI="#tem"/>
                         <NamedIndividual IRI="#Falta_de_ar"/>
                     </ObjectHasValue>
                 </ObjectIntersectionOf>
@@ -361,37 +351,7 @@
                     <Class IRI="#Humano"/>
                     <ObjectHasValue>
                         <ObjectProperty IRI="#tem"/>
-                        <NamedIndividual IRI="#Febre"/>
-                    </ObjectHasValue>
-                </ObjectIntersectionOf>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#infecta"/>
-                <ObjectIntersectionOf>
-                    <Class IRI="#Humano"/>
-                    <ObjectHasValue>
-                        <ObjectProperty IRI="#tem"/>
                         <NamedIndividual IRI="#Sangramento"/>
-                    </ObjectHasValue>
-                </ObjectIntersectionOf>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#infecta"/>
-                <ObjectIntersectionOf>
-                    <Class IRI="#Humano"/>
-                    <ObjectHasValue>
-                        <ObjectProperty IRI="#tem"/>
-                        <NamedIndividual IRI="#Tontura"/>
-                    </ObjectHasValue>
-                </ObjectIntersectionOf>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#infecta"/>
-                <ObjectIntersectionOf>
-                    <Class IRI="#Humano"/>
-                    <ObjectHasValue>
-                        <ObjectProperty IRI="#tem"/>
-                        <NamedIndividual IRI="#Vômitos"/>
                     </ObjectHasValue>
                 </ObjectIntersectionOf>
             </ObjectSomeValuesFrom>
@@ -1163,12 +1123,12 @@
         <Class IRI="#Doença"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Dengue_clássica"/>
+        <Class IRI="#Dengue"/>
         <Class IRI="#Doença"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Dengue_hemorrágica"/>
-        <Class IRI="#Doença"/>
+        <Class IRI="#Dengue"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Doente"/>
